@@ -1,0 +1,17 @@
+class Task:
+    def __init__(self, title, priority, due_date):
+        self.title = title
+        self.priority = priority
+        self.due_date = due_date
+        self.completed = False
+
+def add_task(tasks, title, priority, due_date):
+    task_id = len(tasks) + 1
+    task = Task(title, priority, due_date)
+    tasks[task_id] = task
+    return tasks
+
+def remove_task(tasks, task_id):
+    if task_id in tasks:
+        del tasks[task_id]
+    return tasks
