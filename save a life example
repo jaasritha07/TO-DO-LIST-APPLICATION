@@ -1,0 +1,10 @@
+import json
+
+def save_tasks(tasks, filename):
+    with open(filename, 'w') as f:
+        json.dump(tasks, f)
+
+def load_tasks(filename):
+    with open(filename, 'r') as f:
+        tasks = json.load(f)
+    return tasks
